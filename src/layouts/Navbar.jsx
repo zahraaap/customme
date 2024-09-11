@@ -3,6 +3,7 @@ import cn from "classnames";
 import Container from "../components/ui/Container";
 import IconLogo from "@/components/logo/IconLogo";
 import TypographyLogo from "@/components/logo/TypographyLogo";
+import Button from "../components/ui/Button";
 
 const Navbar = () => {
     return (
@@ -20,6 +21,18 @@ const Navbar = () => {
             "hover:border-gray-600 focus:border-black")} />
             <InlineSVG src="/icons/search.svg"
             className="w-6 h-6 fill-ac-primary absolute top-1/2 -translate-y-1/2 left-6" />
+            </div>
+
+
+            <div className="flex items-center gap-x-4">
+            <Button variant="text"
+                    color="gray"
+                    text="ورود | ثبت‌نام"
+                    rightIcon="login" />
+            <Button variant="text"
+                    color="gray"
+                    text="سبد خرید"
+                    rightIcon="shopping-cart" />
             </div>
             
         </Container>

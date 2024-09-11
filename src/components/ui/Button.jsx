@@ -61,7 +61,7 @@ const sizes = {
 }
 
 
-const Button = ({ variant, color, size , text , iconRight , iconLeft }) =>{
+const Button = ({ variant, color, size , text , rightIcon , iconLeft }) =>{
     return(
 
         <button className={cn(
@@ -70,7 +70,7 @@ const Button = ({ variant, color, size , text , iconRight , iconLeft }) =>{
         sizes[size]
         )}>
         
-        { iconRight && <Icon name={iconRight} size={size === "sm" ? "md" : "lg"} /> }
+        { rightIcon && <Icon name={rightIcon} size={size === "sm" ? "md" : "lg"} /> }
         {text}
         {iconLeft && <Icon name={iconLeft} size={size === "sm" ? "md" : "lg"} /> }
 
