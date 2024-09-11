@@ -1,5 +1,6 @@
 import { createElement } from "react";
 import cn from "classnames";
+import PropTypes from "prop-types";
 
 const Container = ({ tag , containerClassName , wrapperClasName , children }) => {
     return createElement(
@@ -13,4 +14,14 @@ const Container = ({ tag , containerClassName , wrapperClasName , children }) =>
 
     );
 };
+
+
+Container.propTypes = {
+    tag: PropTypes.oneOf(
+      ["nav", "header", "section", "footer", "div"]
+    ).isRequired,
+    containerClassName: PropTypes.string,
+    wrapperClassName: PropTypes.string,
+    children: PropTypes.node.isRequired
+  }
 export default Container;

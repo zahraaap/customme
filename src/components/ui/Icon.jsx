@@ -1,6 +1,6 @@
 import cn from "classnames";
 import InlineSVG from "react-inlinesvg";
-
+import PropTypes from "prop-types";
 
 const sizes = {
     sm:"w-3 h-3",
@@ -17,5 +17,10 @@ const Icon= ({ name , size , className }) => {
     )} />
     );
 }
+ Icon.propTypes = {
+    name:PropTypes.string.isRequired , 
+    size: PropTypes.oneOf(["sm", "md", "lg", "2xl"]).isRequired,
+    className : PropTypes.string
+ }
 
 export default Icon;

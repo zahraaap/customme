@@ -1,4 +1,5 @@
 import cn from "classnames";
+import PropTypes from "prop-types";
 import Icon from "@/components/ui/Icon";
 const style = {
     fill: {
@@ -77,4 +78,18 @@ const Button = ({ variant, color, size , text , iconRight , iconLeft }) =>{
 
     );
 };
+
+
+Button.propTypes = {
+    variant: PropTypes.oneOf(["fill", "outline", "text"]),
+    color: PropTypes.oneOf(["primary", "gray"]),
+    size: PropTypes.oneOf(["sm", "md", "lg", "custom"]),
+    rightIcon: PropTypes.string,
+    leftIcon: PropTypes.string,
+    text: PropTypes.string.isRequired,
+    href: PropTypes.string,
+    disabled: PropTypes.bool,
+    onClick: PropTypes.func,
+    className: PropTypes.string
+}
 export default Button;
