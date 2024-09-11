@@ -1,7 +1,9 @@
+import Navbar from "./layouts/Navbar";
+
 const App = () => {
     return (
     <div>
-        Hello World!
+        <Navbar/>
     </div>
     )
 }
