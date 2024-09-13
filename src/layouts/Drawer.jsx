@@ -31,7 +31,7 @@ const menus= [
 
 
 const Drawer = ({ closeDrawer }) => {
-console.log("hi");
+
 
     return(
 

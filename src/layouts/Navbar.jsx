@@ -14,8 +14,8 @@ const Navbar = () => {
         const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
         const openDrawer = () => {
-                // setDrawerIsOpen(true)
-                console.log("hi");
+                setDrawerIsOpen(true)
+                
          };
       
         const closeDrawer = () => setDrawerIsOpen(false);

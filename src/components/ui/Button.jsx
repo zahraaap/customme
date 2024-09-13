@@ -71,11 +71,11 @@ const Button = ({
     disabled,
     ...rest
  }) =>{
-    console.log(rest.onClick);
+    
     return(
 
         <button type="button"
-                disabled="disabled"
+                disabled={disabled}
                 className={cn(
         "flex items-center gap-x-1 border rounded-lg whitespace-nowrap cursor-pointer",
         style[variant][color],
