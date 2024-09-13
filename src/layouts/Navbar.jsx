@@ -1,14 +1,35 @@
-import InlineSVG from "react-inlinesvg";
 import cn from "classnames";
+import { useState } from "react";
+import InlineSVG from "react-inlinesvg";
 import Container from "../components/ui/Container";
 import IconLogo from "@/components/logo/IconLogo";
+// import Icon from "../components/ui/Icon";
 import TypographyLogo from "@/components/logo/TypographyLogo";
 import Button from "../components/ui/Button";
+import Drawer from "./Drawer";
+
 
 const Navbar = () => {
+
+        const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+
+        const openDrawer = () => {
+                // setDrawerIsOpen(true)
+                console.log("hi");
+         };
+      
+        const closeDrawer = () => setDrawerIsOpen(false);
+
     return (
         <Container tag="nav"
                    wrapperClasName="flex items-center justify-between gap-x-[4.75rem]">
+
+             <Button variant="text"
+                     color="gray"
+                     text="" 
+                     rightIcon="menu"
+                     onClick={openDrawer} />  
+
             <a href="/" className="flex items-center gap-x-1">
             <IconLogo/>
             <TypographyLogo/>
@@ -34,7 +55,9 @@ const Navbar = () => {
                     text="سبد خرید"
                     rightIcon="shopping-cart" />
             </div>
-            
+
+            { drawerIsOpen && <Drawer closeDrawer={closeDrawer} /> }               
+        
         </Container>
     );
 };

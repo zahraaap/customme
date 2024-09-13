@@ -61,14 +61,29 @@ const sizes = {
 }
 
 
-const Button = ({ variant, color, size , text , rightIcon , iconLeft }) =>{
+const Button = ({
+    variant = "fill",
+    color = "primary",
+    size = "lg",
+    text ,
+    rightIcon ,
+    iconLeft,
+    disabled,
+    ...rest
+ }) =>{
+    console.log(rest.onClick);
     return(
 
-        <button className={cn(
-        "flex items-center gap-x-1 border rounded-lg whitespace-nowrap",
+        <button type="button"
+                disabled="disabled"
+                className={cn(
+        "flex items-center gap-x-1 border rounded-lg whitespace-nowrap cursor-pointer",
         style[variant][color],
-        sizes[size]
-        )}>
+        sizes[size],
+        disabled && "cursor-not-allowed"
+        )}
+            {...rest}>
+
         
         { rightIcon && <Icon name={rightIcon} size={size === "sm" ? "md" : "lg"} /> }
         {text}
@@ -89,7 +104,7 @@ Button.propTypes = {
     text: PropTypes.string.isRequired,
     href: PropTypes.string,
     disabled: PropTypes.bool,
-    onClick: PropTypes.func,
+    // onClick: PropTypes.func,
     className: PropTypes.string
 }
 export default Button;
