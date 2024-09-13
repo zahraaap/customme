@@ -5,7 +5,7 @@ const style = {
     fill: {
         primary: cn(
             "bg-ac-primary text-white [&>svg>*]:fill-white ",
-            "hover:bg-ac-shade-600" ,
+            "hover:bg-ac-shade-600",
             "disabled:bg-ac-tint-200 disabled:text-ac-tint-500 ",
             "disabled:[&>svg>*]:fill-ac-tint-500"
         ),
@@ -25,7 +25,7 @@ const style = {
             "hover:[&>svg>*]:fill-ac-shade-600",
             "disabled:border-ac-tint-500 disabled:text-ac-tint-500",
             "disabled:[&>svg>*]:fill-ac-tint-500"
-            
+
         ),
         gray: cn(
             "bg-transparent border-gray-900 text-gray-900",
@@ -40,9 +40,9 @@ const style = {
         primary: cn(
             "bg-transparent border-transparent text-ac-primary",
             "[&>svg>*]:fill-ac-primary",
-            "hover:text-ac-shade-600 hover:[&>svg>*]:fill-ac-shade-600" ,
+            "hover:text-ac-shade-600 hover:[&>svg>*]:fill-ac-shade-600",
             "disabled:text-ac-tint-500 disabled:[&>svg>*]:fill-ac-tint-500"
-            
+
         ),
         gray: cn(
             "bg-transparent border-transparent text-gray-900",
@@ -55,9 +55,9 @@ const style = {
 }
 
 const sizes = {
-    sm:"py-2 px-3 caption-4",
-    md:"py-2 px-6 button-2",
-    lg:"py-3 px-6 button-2"
+    sm: "py-2 px-3 caption-4",
+    md: "py-2 px-6 button-2",
+    lg: "py-3 px-6 button-2"
 }
 
 
@@ -65,29 +65,29 @@ const Button = ({
     variant = "fill",
     color = "primary",
     size = "lg",
-    text ,
-    rightIcon ,
+    text,
+    rightIcon,
     iconLeft,
     disabled,
     ...rest
- }) =>{
-    
-    return(
+}) => {
+
+    return (
 
         <button type="button"
-                disabled={disabled}
-                className={cn(
-        "flex items-center gap-x-1 border rounded-lg whitespace-nowrap cursor-pointer",
-        style[variant][color],
-        sizes[size],
-        disabled && "cursor-not-allowed"
-        )}
+            disabled={disabled}
+            className={cn(
+                "flex items-center gap-x-1 border rounded-lg whitespace-nowrap cursor-pointer",
+                style[variant][color],
+                sizes[size],
+                disabled && "cursor-not-allowed"
+            )}
             {...rest}>
 
-        
-        { rightIcon && <Icon name={rightIcon} size={size === "sm" ? "md" : "lg"} /> }
-        {text}
-        {iconLeft && <Icon name={iconLeft} size={size === "sm" ? "md" : "lg"} /> }
+
+            {rightIcon && <Icon name={rightIcon} size={size === "sm" ? "md" : "lg"} />}
+            {text}
+            {iconLeft && <Icon name={iconLeft} size={size === "sm" ? "md" : "lg"} />}
 
         </button>
 

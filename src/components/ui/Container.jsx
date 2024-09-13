@@ -2,14 +2,14 @@ import { createElement } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-const Container = ({ tag , containerClassName , wrapperClasName , children }) => {
+const Container = ({ tag, containerClassName, wrapperClasName, children }) => {
     return createElement(
         tag,
         {
-            className:cn("py-7 px-6", containerClassName)
+            className: cn("py-7 px-6", containerClassName)
         },
-        <div className={cn("container mx-auto", wrapperClasName ) } >
-            { children }
+        <div className={cn("container mx-auto", wrapperClasName)} >
+            {children}
         </div>
 
     );
@@ -18,10 +18,10 @@ const Container = ({ tag , containerClassName , wrapperClasName , children }) =>
 
 Container.propTypes = {
     tag: PropTypes.oneOf(
-      ["nav", "header", "section", "footer", "div"]
+        ["nav", "header", "section", "footer", "div"]
     ).isRequired,
     containerClassName: PropTypes.string,
     wrapperClassName: PropTypes.string,
     children: PropTypes.node.isRequired
-  }
+}
 export default Container;

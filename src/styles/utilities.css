@@ -2,7 +2,12 @@
 
 @layer utilities {
 
-    .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+    .heading-1,
+    .heading-2,
+    .heading-3,
+    .heading-4,
+    .heading-5,
+    .heading-6 {
         @apply font-bold leading-[140%];
     }
 
@@ -30,7 +35,11 @@
         @apply text-lg;
     }
 
-    .body-1, .body-2, .body-3, .body-4, .body-5 {
+    .body-1,
+    .body-2,
+    .body-3,
+    .body-4,
+    .body-5 {
         @apply font-normal leading-[180%];
     }
 
@@ -58,15 +67,20 @@
         @apply font-light text-lg leading-[180%];
     }
 
-    .caption-1, .caption-2, .caption-3, .caption-4 {
+    .caption-1,
+    .caption-2,
+    .caption-3,
+    .caption-4 {
         @apply leading-[180%];
     }
 
-    .caption-1, .caption-3 {
+    .caption-1,
+    .caption-3 {
         @apply font-bold;
     }
 
-    .caption-2, .caption-4 {
+    .caption-2,
+    .caption-4 {
         @apply font-normal;
     }
 
@@ -78,7 +92,8 @@
         @apply text-xs;
     }
 
-    .caption-3, .caption-4 {
+    .caption-3,
+    .caption-4 {
         @apply text-[0.625rem];
     }
 
