@@ -1,10 +1,12 @@
 import Navbar from "./layouts/Navbar";
+import Subnavbar from "./layouts/SubNavbar";
 
 const App = () => {
     return (
-        <div>
+        <>
             <Navbar />
-        </div>
+            <Subnavbar />
+        </>
     )
 }
 export default App;
