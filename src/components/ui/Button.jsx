@@ -69,6 +69,7 @@ const Button = ({
     rightIcon,
     iconLeft,
     disabled,
+    className,
     ...rest
 }) => {
 
@@ -79,8 +80,9 @@ const Button = ({
             className={cn(
                 "flex items-center gap-x-1 border rounded-lg whitespace-nowrap cursor-pointer",
                 style[variant][color],
-                sizes[size],
-                disabled && "cursor-not-allowed"
+                size == "custom" && sizes[size],
+                disabled && "cursor-not-allowed",
+                className
             )}
             {...rest}>
 

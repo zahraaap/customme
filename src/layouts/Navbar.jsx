@@ -22,18 +22,21 @@ const Navbar = () => {
 
         return (
                 <Container tag="nav"
-                        wrapperClasName="flex items-center justify-between gap-x-[4.75rem]">
+                        wrapperClasName="flex items-center justify-start lg:justify-between gap-x-3 lg:gap-x-[4.75rem]">
 
                         <Button variant="text"
                                 color="gray"
+                                size="custom"
                                 text=""
+                                className="md:hidden p-1"
                                 rightIcon="menu"
                                 onClick={openDrawer} />
 
-                        <a href="/" className="flex items-center gap-x-1">
+                        <a href="/" className="flex items-center gap-x-1 order-1 md:order-none" >
                                 <IconLogo />
-                                <TypographyLogo />
+                                <TypographyLogo className="hidden lg:block" />
                         </a>
+
                         <div className="flex-1 relative">
                                 <input type="text"
                                         placeholder="جستجو"
@@ -45,7 +48,7 @@ const Navbar = () => {
                         </div>
 
 
-                        <div className="flex items-center gap-x-4">
+                        <div className="hidden md:flex items-center gap-x-4">
                                 <Button variant="text"
                                         color="gray"
                                         text="ورود | ثبت‌نام"
@@ -53,6 +56,7 @@ const Navbar = () => {
                                 <Button variant="text"
                                         color="gray"
                                         text="سبد خرید"
+                                        className="hidden lg:flex"
                                         rightIcon="shopping-cart" />
                         </div>
 

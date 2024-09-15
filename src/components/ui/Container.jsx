@@ -6,7 +6,7 @@ const Container = ({ tag, containerClassName, wrapperClasName, children }) => {
     return createElement(
         tag,
         {
-            className: cn("py-7 px-6", containerClassName)
+            className: cn("py-3 lg:py-7 px-5 lg:px-6", containerClassName)
         },
         <div className={cn("container mx-auto", wrapperClasName)} >
             {children}

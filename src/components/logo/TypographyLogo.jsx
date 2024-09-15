@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 const TypographyLogo = ({ className }) => {
   return (
     <InlineSVG src="/logos/typography.svg"
-      className={cn("h-[3.125rem] w-auto", className)} />
+      className={cn(" h-[3.125rem] w-auto", className)} />
   );
 }
 
