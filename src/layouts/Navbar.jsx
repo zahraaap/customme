@@ -25,14 +25,14 @@ const Navbar = () => {
                         wrapperClasName={cn("flex items-center justify-start lg:justify-between" ,
                                 "gap-x-3 lg:gap-x-[4.75rem] ")}
                                 
-                                containerClassName="md:border-b md:border-b-gray-400">
+                                containerClassName="lg:border-b lg:border-b-gray-400">
 
                                 
                         <Button variant="text"
                                 color="gray"
                                 size="custom"
                                 text=""
-                                className="md:hidden p-1"
+                                className="lg:hidden p-1"
                                 rightIcon="menu"
                                 onClick={openDrawer} />
 
