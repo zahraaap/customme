@@ -80,7 +80,7 @@ const Button = ({
             className={cn(
                 "flex items-center gap-x-1 border rounded-lg whitespace-nowrap cursor-pointer",
                 style[variant][color],
-                size == "custom" && sizes[size],
+                size !== "custom" && sizes[size],
                 disabled && "cursor-not-allowed",
                 className
             )}

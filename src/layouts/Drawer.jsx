@@ -1,4 +1,5 @@
 import cn from "classnames";
+import { NavLink } from "react-router-dom";
 import Button from "../components/ui/Button";
 import PropTypes from "prop-types";
 
@@ -7,22 +8,22 @@ const menus = [
     {
         id: 1,
         items: [
-            { id: 1, name: "پوشاک" },
-            { id: 2, name: "لوازم خانه" },
-            { id: 3, name: "قاب موبایل" },
-            { id: 4, name: "اکسسوری" },
-            { id: 5, name: "مپرسه و اداره" },
-            { id: 6, name: "کارت و پوستر" },
-            { id: 7, name: "جشن و مهمانی" }
+            { id: 1, name: "پوشاک", path: "clothes" },
+            { id: 2, name: "لوازم خانه", path: "home-accessories" },
+            { id: 3, name: "قاب موبایل", path: "phone-case" },
+            { id: 4, name: "اکسسوری", path: "accessory" },
+            { id: 5, name: "مدرسه و اداره", path: "school-and-office" },
+            { id: 6, name: "کارت و پوستر", path: "cart-and-poster" },
+            { id: 7, name: "جشن و مهمانی", path: "party" }
         ]
     },
 
     {
         id: 2,
         items: [
-            { id: 1, name: "همراه با کاستومی" },
-            { id: 2, name: "خدمات مشتریان" },
-            { id: 3, name: "راهنمای خرید" }
+            { id: 1, name: "همراه با کاستومی", path: "with-customme" },
+            { id: 2, name: "خدمات مشتریان", path: "custommer-service" },
+            { id: 3, name: "راهنمای خرید", path: "shopping-guide" }
         ]
     }
 
@@ -54,9 +55,18 @@ const Drawer = ({ closeDrawer }) => {
                                 {
                                     menu.items.map(item => {
                                         return (
-                                            <div key={item.id} className="flex justify-between items-center gap-x-8">
+                                            <NavLink
+                                                key={item.id}
+                                                to={(menu.id === 1 ? "products/" : "") + item.path}
+                                                className={({ isActive }) => cn(
+                                                    "flex justify-between items-center",
+                                                    "gap-x-8 px-2 border-r-2",
+                                                    isActive
+                                                        ? "border-r-ac-primary text-ac-primary"
+                                                        : "border-r-transparent hover:text-ac-primary"
+                                                )}>
                                                 {item.name}
-                                            </div>
+                                            </NavLink>
                                         )
                                     })
                                 }

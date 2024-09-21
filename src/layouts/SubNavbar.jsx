@@ -1,14 +1,16 @@
 import Container from "../components/ui/Container";
+import cn from "classnames";
 import Button from "../components/ui/Button";
+import { Link, NavLink } from "react-router-dom";
 
 const menuItems = [
-    { id: 1, name: "پوشاک" },
-    { id: 2, name: "لوازم خانه" },
-    { id: 3, name: "قاب موبایل" },
-    { id: 4, name: "اکسسوری" },
-    { id: 5, name: "مپرسه و اداره" },
-    { id: 6, name: "کارت و پوستر" },
-    { id: 7, name: "جشن و مهمانی" }
+    { id: 1, name: "پوشاک", path: "clothes" },
+    { id: 2, name: "لوازم خانه", path: "home-accessories" },
+    { id: 3, name: "قاب موبایل", path: "phone-case" },
+    { id: 4, name: "اکسسوری", path: "accessory" },
+    { id: 5, name: "مدرسه و اداره", path: "school-and-office" },
+    { id: 6, name: "کارت و پوستر", path: "cart-and-poster" },
+    { id: 7, name: "جشن و مهمانی", path: "party" }
 ]
 
 const Subnavbar = () => {
@@ -25,9 +27,16 @@ const Subnavbar = () => {
                 {
                     menuItems.map(item => {
                         return (
-                            <span key={item.id} className="px-0.5 body-3 whitespace-nowrap">
+                            <NavLink key={item.id}
+                                to={"products/" + item.path}
+                                className={({ isActive }) => cn(
+                                    "px-0.5 py-1 body-3 whitespace-nowrap border-b-2",
+                                    isActive
+                                        ? "border-b-ac-primary text-ac-primary"
+                                        : "border-b-transparent hover:text-ac-primary"
+                                )}>
                                 {item.name}
-                            </span>
+                            </NavLink>
                         )
                     })
                 }

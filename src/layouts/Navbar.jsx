@@ -7,6 +7,7 @@ import IconLogo from "@/components/logo/IconLogo";
 import TypographyLogo from "@/components/logo/TypographyLogo";
 import Button from "../components/ui/Button";
 import Drawer from "./Drawer";
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -36,10 +37,10 @@ const Navbar = () => {
                                 rightIcon="menu"
                                 onClick={openDrawer} />
 
-                        <a href="/" className="flex items-center gap-x-1 order-1 md:order-none" >
+                        <Link to="/" className="flex items-center gap-x-1 order-1 md:order-none" >
                                 <IconLogo />
                                 <TypographyLogo className="hidden lg:block" />
-                        </a>
+                        </Link>
 
                         <div className="flex-1 relative">
                                 <input type="text"
