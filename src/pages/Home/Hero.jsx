@@ -4,7 +4,7 @@ import Button from "../../components/ui/Button";
 
 const Hero = () => (
   <Container tag="header"
-             wrapperClasName={cn(
+             wrapperClassName={cn(
                "flex flex-col-reverse md:flex-row items-center gap-x-6",
                "py-2 px-4 lg:py-9 lg:pr-[4.5rem] lg:pl-32",
                "bg-ac-tint-300 rounded-lg lg:rounded-2xl",

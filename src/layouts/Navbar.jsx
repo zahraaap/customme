@@ -23,7 +23,7 @@ const Navbar = () => {
 
         return (
                 <Container tag="nav"
-                        wrapperClasName={cn("flex items-center justify-start lg:justify-between" ,
+                        wrapperClassName={cn("flex items-center justify-start lg:justify-between" ,
                                 "gap-x-3 lg:gap-x-[4.75rem] ")}
                                 
                                 containerClassName="lg:border-b lg:border-b-gray-400">

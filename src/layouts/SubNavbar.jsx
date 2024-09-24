@@ -17,7 +17,7 @@ const Subnavbar = () => {
     return (
         <Container tag="nav"
             containerClassName="hidden lg:block"
-            wrapperClasName="flex items-center gap-x-8">
+            wrapperClassName="flex items-center gap-x-8">
             <Button text=" خودت طراحیش کن!"
                 size="md"
                 rightIcon="magicpen"
