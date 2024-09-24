@@ -1,6 +1,9 @@
+import Hero from "./Hero";
+
+
 const Home = () => {
     return (
-        <h1 className="heading-3"> home page</h1>
+       <Hero/>
     )
 }
 export default Home;
