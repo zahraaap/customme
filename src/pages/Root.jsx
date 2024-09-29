@@ -9,7 +9,7 @@ const Root = () => {
       <Navbar />
       <SubNavbar />
       <Outlet />
-      
+
     </>
   );
 }

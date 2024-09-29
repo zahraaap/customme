@@ -1,6 +1,6 @@
 import cn from "classnames";
 import Container from "../../components/ui/Container";
-import Button from "../../components/ui/Button";
+import LinkButton from "../../components/ui/LinkButton.jsx"
 
 const Hero = () => (
   <Container tag="header"
@@ -22,7 +22,7 @@ const Hero = () => (
         رنگ و طرح و نوشته ی روی محصولات رو انتخاب کنید
       </p>
       <div className="flex items-center gap-x-2 lg:gap-x-6">
-        <Button size="custom"
+        <LinkButton size="custom"
                     text="شروع طراحی"
                     rightIcon="brush"
                     className={cn(
@@ -31,7 +31,7 @@ const Hero = () => (
                   "[&>svg]:w-4 [&>svg]:h-4",
                   "lg:[&>svg]:w-6 lg:[&>svg]:h-6"
                 )} />
-        <Button variant="outline"
+        <LinkButton variant="outline"
                     size="custom"
                     text="دیدن محصولات"
                     className={cn(
