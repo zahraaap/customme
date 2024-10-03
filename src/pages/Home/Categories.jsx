@@ -18,7 +18,7 @@ const Categories = () => {
         <Container tag="section">
             <Title icon="medal-star" text="دسته بندی محصولات" />
 
-            <div className="flex items-center gap-x-6 mb-6" >
+            <div className="flex items-center gap-x-6 mb-6 overflow-x-auto" >
                 {/* <Category image="accessory" title="اکسسوری" /> */}
 
                 {

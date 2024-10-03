@@ -90,7 +90,7 @@ const LinkButton = ({
   )
 );
 
-LinkButton.propTypes = {
+const props= {
   variant: PropTypes.oneOf(["fill", "outline", "text"]),
   color: PropTypes.oneOf(["primary", "gray"]),
   size: PropTypes.oneOf(["sm", "md", "lg", "custom"]),
@@ -102,5 +102,9 @@ LinkButton.propTypes = {
   onClick: PropTypes.func,
   className: PropTypes.string
 }
+
+LinkButton.propTypes = props;
+
+export { props };
 
 export default LinkButton;

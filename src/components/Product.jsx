@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import cn from "classnames";
 import Icon from "./ui/Icon";
+import LinkButton, { props } from "./ui/LinkButton"
 
-const Product = ({ image, title, description, colors, favorite, price }) => (
+const Product = ({ image, title, description, colors, favorite, price,btn }) => (
   <div className={cn(
     "w-full flex flex-col items-stretch gap-y-4 p-4",
     "border border-gray-500 rounded-2xl",
@@ -49,9 +50,13 @@ const Product = ({ image, title, description, colors, favorite, price }) => (
       </h5>
       <p className="text-black body-4">{ description }</p>
     </div>
-    <span className="heading-6 text-black self-end">
+   {
+    price && (   <span className="heading-6 text-black self-end">
       { price.toLocaleString("fa-IR") + " " + "تومان" }
-    </span>
+    </span>)
+   }
+       { btn && <LinkButton {...btn}  /> }
+ 
   </div>
 );
 
@@ -61,7 +66,8 @@ Product.propTypes = {
   description: PropTypes.string.isRequired,
   colors: PropTypes.arrayOf(PropTypes.string),
   favorite: PropTypes.bool,
-  price: PropTypes.number
+  price: PropTypes.number,
+  btn:PropTypes.shape(props)
 }
 
 export default Product;
