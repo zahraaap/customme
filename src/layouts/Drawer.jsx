@@ -27,7 +27,7 @@ const menus = [
 ];
 
 const Drawer = ({ closeDrawer }) => (
-  <div className="bg-black/60 fixed top-0 bottom-0 left-0 right-0">
+  <div className="bg-black/60 fixed top-0 bottom-0 left-0 right-0 z-10">
     <nav className={cn(
       "bg-white flex flex-col justify-between gap-y-[4.5rem]",
       "fixed top-0 bottom-0 right-0 py-10 px-5 overflow-y-auto"
