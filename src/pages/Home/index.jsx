@@ -9,6 +9,7 @@ import RecentDesigns from "./RecentDesigns";
 import Favorite from "./Favorite";
 import WeddingCards from "./WeddingCards";
 
+
 const Home = () => (
   <>
     <Hero />
@@ -21,6 +22,7 @@ const Home = () => (
     <RecentDesigns />
     <WeddingCards />
     <Favorite />
+
   </>
 );
 
