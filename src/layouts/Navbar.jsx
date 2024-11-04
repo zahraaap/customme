@@ -50,7 +50,8 @@ const Navbar = () => {
               )} />
       </div>
       <div className="hidden md:flex items-center gap-x-4">
-        <LinkButton variant="text"
+        <LinkButton href="/login"
+                    variant="text"
                     color="gray"
                     text="ورود | ثبت‌نام"
                     rightIcon="login" />

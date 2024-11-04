@@ -11,7 +11,7 @@ const sizes = {
 
 const Icon = ({ name, size, className }) => {
     return (
-        <InlineSVG src={`/icons/${name}.svg`}
+        <InlineSVG src={name.startsWith("/")? name : `/icons/${name}.svg`}
             className={cn(
                 sizes[size],
                 className
